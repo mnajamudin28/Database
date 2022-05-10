@@ -1,0 +1,8 @@
+NOT NULL // value harus di isi
+
+CREATE TABLE products(
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+)
