@@ -1,3 +1,5 @@
+CRUD = Create Read Update Destroy
+
 NOT NULL // value harus di isi
 
 CREATE TABLE products(
@@ -5,4 +7,57 @@ CREATE TABLE products(
   name STRING,
   price MONEY,
   PRIMARY KEY (id)
-)
+) // membuat table
+
+INSERT INTO products
+VALUES(1, 'pen', 1.2) //input data ke table
+
+INSERT INTO products(id,name)
+VALUES(2, "pencil")// menghasilkan price NULL
+
+SELECT name, price FROM products ; //menampilkan name dan price
+
+* digambarkan untuk semuanya
+
+SELECT * FROM products WHERE id=1 //Ini digunakan untuk mengekstrak hanya catatan yang memenuhi kondisi tertentu. syntax WHERE
+
+UPDATE products
+SET price = 0.80
+WHERE id=2 // update column
+
+ALTER TABLE products
+ADD stock INT //Menambah column
+
+DELETE FROM products // hati2 delete kolom product tanpa menggunakan condition WHERE
+WHERE name = "pencil" // baris yang mempunyai value pencil.
+---------------------------------------------------------------------------------------
+CREATE TABLE "customers" (
+  id INT NOT NULL,
+  first_name STRING,
+  last_name STRING,
+  address STRING
+  )
+---------------------------------------------------------------------------------------
+TABLE orders
+CREATE TABLE orders(
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id)
+  FOREIGN KEY (customer_id) REFERENCES customers (id), //foreign key adalah key asing yang menghubungkan table order dan customers
+  FOREIGN key (product_id) REFERENCES products (id)
+  )
+  
+INSERT INTO orders
+VALUES (1, 4362, 2, 1) 
+
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders
+INNER JOIN customers
+ON orders.customer_id = customers.id // menampilkan nama customer
+
+SELECT orders.order_number, products.name, products.price, products.stock
+FROM orders
+INNER JOIN products
+ON orders.product_id = products.id //menampilkan product
