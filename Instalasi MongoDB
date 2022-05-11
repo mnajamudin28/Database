@@ -3,6 +3,8 @@ Instal costumize
 hilangkan cheklist pada compas mongo
 finish
 
+buka c: create folder data > folder db
+
 - buka hyper
 cd ~
 touch .bash_profil 
