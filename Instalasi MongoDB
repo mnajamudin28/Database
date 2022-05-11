@@ -1,0 +1,32 @@
+https://www.mongodb.com/try/download/community
+Instal costumize 
+hilangkan cheklist pada compas mongo
+finish
+
+- buka hyper
+cd ~
+touch .bash_profil 
+vim .bash_profile
+pada editor tekan i
+muncul INSERT kemudian masukan
+alias mongod"=/c/Program\ Files/MongoDB/Server/5.0/bin/mongod.exe"
+alias mongo"=/c/Program\ Files/MongoDB/Server/5.0/bin/mongo.exe"
+tekan esc
+ketik :wq!
+Selesai
+
+restart hyper termilan
+ketik mongo --version
+akan muncul 
+MongoDB shell version v5.0.8
+Build Info: {
+    "version": "5.0.8",
+    "gitVersion": "c87e1c23421bf79614baf500fda6622bd90f674e",
+    "modules": [],
+    "allocator": "tcmalloc",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "x86_64",
+        "target_arch": "x86_64"
+    }
+}
