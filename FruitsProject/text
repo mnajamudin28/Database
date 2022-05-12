@@ -1,0 +1,10 @@
+menggunakan mongoDB jadul
+
+instal mongo db with node js
+
+npm init
+npm i mongodb
+
+jangan lupa jalanakan server ke tab baru di shell ketik mongod
+
+setelah input data ke mongo shell sengan ketik mongo
