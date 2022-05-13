@@ -2,7 +2,7 @@ ketik in shell mongod buka tab baru ketik mongo
 di tab mongo ketik use shopDB
 sudah masuk shopDB lalu kita masukan data dengan cara
 db.product.insertOne({_id: 1, name: "pen", price: 1.20})
-show collections untuk melihat semua database
+show collections untuk melihat isi database
 db.products.find() //menampilkan isi products
 db.products.find({name: "pencil"}) //menampilkan baris pencil
 db.products.find({price: {$gt: 1}}) //$gt adalah query operator https://www.mongodb.com/docs/manual/reference/operator/query/
@@ -10,10 +10,8 @@ db.products.find({_id:1},{name:1}) //parameter kedua disebut projection
 db.products.find({_id:1},{name:1, _id:0}) akan menampilkan { "name" : "pen" }
 db.products.updateOne({_id:1 }, {$set: {stock: 32}})
 db.products.deleteOne({_id: 2}) //menghapus data
-
 ---------------------------------------------------------------
 Relation
-
 db.products.insertOne({
     _id: 2,
     name: "Pencil",
@@ -71,3 +69,4 @@ db.products.insertOne({
     orderNumber: 3243,
     productsOrdered: [1,2]
 }
+db.dropDatabase() //menghapus database
