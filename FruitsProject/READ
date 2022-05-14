@@ -1,3 +1,7 @@
+Ada 2 file app.js dan apps.js
+app.js menggunakan mongoDB
+apps.js menggunakan mongoose
+
 menggunakan mongoDB jadul
 
 instal mongo db with node js
